@@ -1,0 +1,30 @@
+@use '../util/' as *;
+
+.card{
+  &__back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--card-bg);
+    padding: rem(25);
+    border-radius: rem(5);
+    cursor: pointer;
+    z-index: 1;
+    transition: all 2s;
+  }
+}
+
+.card__back--instagram{
+  top: rem(5);
+}
+
+.logo{
+  width: rem(80);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
