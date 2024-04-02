@@ -1,18 +1,18 @@
-@use '../util' as *;
+@use "../util" as *;
 // https://codepen.io/SaraSoueidan/pen/jpBbrq/?editors=1100
 
-.toggle{
+.toggle {
   display: grid;
   grid-template-columns: 1fr 3rem;
   border: none;
   margin: 0;
-  
-  label{
-    font-size: rem(14);
-    color:var(--toggle);
-    width:max-content;
 
-    &[for="dark"]{
+  label {
+    font-size: rem(14);
+    color: var(--toggle);
+    width: max-content;
+
+    &[for="dark"] {
       line-height: rem(24);
       margin-right: rem(13);
     }
@@ -28,10 +28,6 @@
     opacity: 0;
     width: rem(24);
     height: rem(24);
-  
-    &:focus ~ .toggle__button{
-      border: 2px solid white;
-    }
   }
 
   &__background {
@@ -45,21 +41,20 @@
     pointer-events: none;
   }
 
-  &__button{
+  &__button {
     position: absolute;
     left: rem(3);
     top: rem(3);
     right: 100%;
-    width: rem(18); 
+    width: rem(18);
     height: rem(18);
     border-radius: 50%;
     background-color: var(--toggle-button);
     transition: all 200ms ease-in-out;
-  } 
+  }
 
-  #light:checked ~ .toggle__button{
+  #light:checked ~ .toggle__button {
     left: calc(100% - 21px);
     right: 3px;
   }
-
 }
